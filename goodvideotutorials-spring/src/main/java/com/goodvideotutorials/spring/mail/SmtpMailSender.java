@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Primary
-@Component
 public class SmtpMailSender implements MailSender {
 	private static final Logger logger = LoggerFactory.getLogger(SmtpMailSender.class);
 	
@@ -15,7 +13,7 @@ public class SmtpMailSender implements MailSender {
 	 */
 	@Override
 	public void send(String to, String subject, String body) {
-		logger.info("sending smtp 2 to " + to);
+		logger.info("sending smtp 3 to " + to);
 		logger.info("Subject: " + subject);
 		logger.info("body: " + body);
 	}
