@@ -2,18 +2,20 @@ package com.goodvideotutorials.spring.mail;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+@Primary
 @Component
-public class MockMailSender implements MailSender {
-	private static final Logger logger = LoggerFactory.getLogger(MockMailSender.class);
+public class SmtpMailSender implements MailSender {
+	private static final Logger logger = LoggerFactory.getLogger(SmtpMailSender.class);
 	
 	/* (non-Javadoc)
 	 * @see com.goodvideotutorials.spring.mail.MailSender#send(java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void send(String to, String subject, String body) {
-		logger.info("sending mail to " + to);
+		logger.info("sending smtp 2 to " + to);
 		logger.info("Subject: " + subject);
 		logger.info("body: " + body);
 	}
