@@ -11,6 +11,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class SmtpMailSender {
 	
+//	static
+//	{
+//	     System.setProperty("mail.smtp.auth", "true");
+//	     System.setProperty("mail.smtp.socketFactory.port", "465");
+//	     System.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//	     System.setProperty("mail.smtp.socketFactory.fallback", "false");
+//	     System.setProperty("mail.smtp.user","noreply.log4jrobot@gmail.com");
+//	     System.setProperty("mail.smtp.starttls.enable","true");
+//	     System.setProperty("mail.transport.protocol", "smtp");
+//	     System.setProperty("mail.smtp.starttls.enable", "true");
+//	     System.setProperty("mail.smtp.host", "smtp.gmail.com");
+//	     System.setProperty("mail.smtp.port", "465");
+//	     System.setProperty("mail.smtp.quitwait", "false");
+//	}
+	
 	@Autowired
 	private JavaMailSender javaMailSender; 
 	
